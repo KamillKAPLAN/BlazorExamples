@@ -61,3 +61,15 @@ as
 Begin     
    Delete from tblCustomer where CustomerId = @CustomerId     
 End
+go
+/* Employees */
+  
+CREATE TABLE [dbo].[Employees] (  
+    [Id]          NVARCHAR (250) NOT NULL,  
+    [Name]        NVARCHAR (250) NULL,  
+    [Department]  NVARCHAR (250) NULL,  
+    [Designation] NVARCHAR (250) NULL,  
+    [Company]     NVARCHAR (250) NULL,  
+    [City]        NVARCHAR (250) NULL,  
+    CONSTRAINT [PK_Employees] PRIMARY KEY CLUSTERED ([Id] ASC)  
+);

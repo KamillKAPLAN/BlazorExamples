@@ -23,7 +23,7 @@ namespace AdoNetCRUD.Data
                 string _database = config.GetValue<string>("DbConfig:DatabaseName");
                 string _username = config.GetValue<string>("DbConfig:UserName");
                 string _password = config.GetValue<string>("DbConfig:Password");
-                return ($"Server={_server};Database={_database};User ID={_username};Password={_password};Trusted_Connection=False;MultipleActiveResultSets=true;");
+                return ($"Server={_server}; Database={_database}; User ID={_username}; Password={_password}; Trusted_Connection=True; MultipleActiveResultSets=true;");
             }
         }
 

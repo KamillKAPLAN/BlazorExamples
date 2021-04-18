@@ -1,5 +1,6 @@
 using AdoNetCRUD.Data;
 using AdoNetCRUD.Data.AdoNet_SP;
+using AdoNetCRUD.Data.AdoNetQueries;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,11 @@ namespace AdoNetCRUD
             services.AddServerSideBlazor();
             services.AddSingleton<CustomerService>();
             services.AddSingleton<DataAccessService>();
+
+            var sqlConnectionConfiguration = new SqlConnectionConfiguration(Configuration.GetConnectionString("SqlDbContext"));
+            services.AddSingleton(sqlConnectionConfiguration);
+            services.AddScoped<IEmployeeService, EmployeeService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

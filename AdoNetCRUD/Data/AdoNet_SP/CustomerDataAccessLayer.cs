@@ -25,6 +25,7 @@ namespace AdoNetCRUD.Data.AdoNet_SP
 
                 con.Open();
                 cmd.ExecuteNonQuery();
+
                 con.Close();
             }
         }
