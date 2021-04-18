@@ -1,3 +1,4 @@
+using AdoNetCRUD.Data;
 using AdoNetCRUD.Data.AdoNet_SP;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,6 +24,7 @@ namespace AdoNetCRUD
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<CustomerService>();
+            services.AddSingleton<DataAccessService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
