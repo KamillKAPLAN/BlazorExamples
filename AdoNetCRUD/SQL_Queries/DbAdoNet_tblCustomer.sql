@@ -20,14 +20,14 @@ Begin
 End
 go
 /* Stored Procedure Select - GetAll */
-Create procedure sp_GetCustomerAll
+Create procedure sp_GetAllCustomers
 as   
 Begin   
     SELECT CustomerId, Name, City, Country, Gender FROM tblCustomer   
 End
 go
 /* Stored Procedure GetById */
-Create procedure sp_GetCustomerById (    
+Create procedure sp_GetByIdCustomer (    
     @CustomerId int
 )    
 as     
@@ -54,7 +54,7 @@ Begin
 End
 go
 /* Stored Procedure Delete */
-Create procedure usp_DeleteCustomer (
+Create procedure sp_DeleteCustomer (
 	@CustomerId int     
 )     
 as      
